@@ -4,7 +4,7 @@ This repository provides a setup guide for automating data collection from Leagu
 
 ## 0. Preparation
 
-1. **Set the Timezone**
+1. Set the Timezone
    ```bash
    sudo timedatectl set-timezone Asia/Seoul
    date
