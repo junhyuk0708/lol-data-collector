@@ -75,3 +75,14 @@ Replace <container_name> with the actual name of the container (e.g., lol-c, lol
    ```bash
    docker logs <container_name>
    ```
+
+   ```bash
+   # Configure logging
+   log_folder = "/usr/src/app/data"
+   os.makedirs(log_folder, exist_ok=True)
+   logging.basicConfig(filename=os.path.join(log_folder, '1_Challenger_API.log'), 
+                       level=logging.INFO, 
+                       format='%(asctime)s - %(levelname)s - %(message)s')
+   
+   logging.info("Starting the script 1_Challenger_API.py")
+   ```
