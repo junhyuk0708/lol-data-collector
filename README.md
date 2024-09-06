@@ -58,16 +58,16 @@ Build Docker images for each rank using their respective Dockerfiles:
    ```
 3. Add the following cron jobs to run the Docker containers daily at 4:00 AM:
    ```bash
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-c -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-c
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-gm -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-gm
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-m -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-m
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-d -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-d
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-e -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-e
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-p -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-p
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-g -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-g
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-s -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-s
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-b -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-b
-   00 04 * * * /usr/bin/docker run --rm -d --name lol-i -v /home/gc/Desktop/ljh/src/lol:/usr/src/app lol-i
+   05 00 * * * /usr/bin/docker run --rm -d --name lol-c -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-c
+   10 00 * * * /usr/bin/docker run --rm -d --name lol-gm -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-gm
+   15 00 * * * /usr/bin/docker run --rm -d --name lol-m -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-m
+   20 00 * * * /usr/bin/docker run --rm -d --name lol-d -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-d
+   25 00 * * * /usr/bin/docker run --rm -d --name lol-e -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-e
+   30 00 * * * /usr/bin/docker run --rm -d --name lol-p -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-p
+   35 00 * * * /usr/bin/docker run --rm -d --name lol-g -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-g
+   40 00 * * * /usr/bin/docker run --rm -d --name lol-s -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-s
+   45 00 * * * /usr/bin/docker run --rm -d --name lol-b -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-b
+   50 00 * * * /usr/bin/docker run --rm -d --name lol-i -v /home/gc/Desktop/ljh/src/lol/lol_data_collector:/usr/src/app lol-i
    ```
 ## 4. View Docker Logs
 To check the logs of a specific Docker container, use:
